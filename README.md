@@ -26,7 +26,7 @@ cd derived_population
 
 Option B. Download ZIP
 
--   <https://github.com/damurka/cd2030.core/archive/refs/heads/main.zip>\
+-   <https://github.com/damurka/derived_population/archive/refs/heads/master.zip>\
 -   Unzip and open the `derived_population` folder
 
 ### 2) Restore the environment
