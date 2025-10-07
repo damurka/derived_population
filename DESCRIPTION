@@ -1,0 +1,14 @@
+Package: cd2030.popderiv
+Title: Derive Population Denominators
+Version: 0.0.0.9000
+Authors@R: 
+    person("David", "Kariuki", , "hello@damurka.com", role = c("aut", "cre"))
+Description: Tools to derive population denominators for demographic, and coverage analyses.
+License: AGPL (>= 3)
+Imports: 
+    config,
+    golem,
+    shiny
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
