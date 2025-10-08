@@ -23,8 +23,10 @@ output: github_document
 
 You can install the development version of `{cd2030.popderiv}` like so:
 
-```{r}
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```{r, eval=FALSE}
+# install.packages('devtools')
+devtools::install_github('damurka/cd2030.core')
+devtools::install_github('damurka/derived_population')
 ```
 
 ## Run
@@ -33,28 +35,4 @@ You can launch the application by running:
 
 ```{r, eval = FALSE}
 cd2030.popderiv::run_app()
-```
-
-## About
-
-You are reading the doc about version : `r golem::pkg_version()`
-
-This README has been compiled on the
-
-```{r}
-Sys.time()
-```
-
-Here are the tests results and package coverage:
-
-```{r, error = TRUE}
-devtools::check(quiet = TRUE)
-```
-
-```{r echo = FALSE}
-unloadNamespace("cd2030.popderiv")
-```
-
-```{r, error = TRUE}
-covr::package_coverage()
 ```
