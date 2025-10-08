@@ -47,7 +47,9 @@ app_server <- function(input, output, session) {
   })
 
   regional_coverage <- reactive({
-    req(cache(), input$region)
+    req(cache())
+
+    if (!isTruthy(input$region)) return(NULL)
 
     cache()$calculate_indicator_coverage('adminlevel_1') %>%
       mutate(

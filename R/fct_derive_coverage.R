@@ -22,11 +22,6 @@ derive_coverage <- function(national_data, regional_data, indicator, population,
     cli::cli_abort(c("x" = "{.arg national_data} missing required columns: {.val {missing_cols}}."))
   }
 
-  missing_cols <- setdiff(need_cols, names(regional_data))
-  if (length(missing_cols)) {
-    cli::cli_abort(c("x" = "{.arg regional_data} missing required columns: {.val {missing_cols}}."))
-  }
-
   survey_year <- survey_year - 1
 
   indicator <- arg_match(indicator, get_all_indicators())
@@ -80,6 +75,11 @@ derive_coverage <- function(national_data, regional_data, indicator, population,
 
   # ---- SUBNATIONAL: DISTRIBUTE DERIVED NATIONAL DENOMINATOR ----
   data_joined <- if (admin_level == 'adminlevel_1') {
+
+    missing_cols <- setdiff(need_cols, names(regional_data))
+    if (length(missing_cols)) {
+      cli::cli_abort(c("x" = "{.arg regional_data} missing required columns: {.val {missing_cols}}."))
+    }
 
     # Prepare national population and derived_denom for merge
     national_sel <- national %>%
