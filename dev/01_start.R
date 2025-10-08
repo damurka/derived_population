@@ -45,7 +45,7 @@ golem::use_readme_rmd(open = FALSE)
 devtools::build_readme()
 # Note that `contact` is required since usethis version 2.1.5
 # If your {usethis} version is older, you can remove that param
-usethis::use_code_of_conduct(contact = "Golem User")
+usethis::use_code_of_conduct(contact = "pkaberia@aphrc.org")
 usethis::use_lifecycle_badge("Experimental")
 usethis::use_news_md(open = FALSE)
 
@@ -67,7 +67,7 @@ usethis::use_git()
 ## Sets the remote associated with 'name' to 'url'
 usethis::use_git_remote(
   name = "origin",
-  url = "https://github.com/<OWNER>/<REPO>.git"
+  url = "https://github.com/damurka/derived_population.git"
 )
 
 # You're now set! ----

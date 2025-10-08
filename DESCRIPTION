@@ -6,9 +6,16 @@ Authors@R:
 Description: Tools to derive population denominators for demographic, and coverage analyses.
 License: AGPL (>= 3)
 Imports: 
+    cli,
     config,
     golem,
-    shiny
+    purrr,
+    scales,
+    shiny,
+    shinycssloaders
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
